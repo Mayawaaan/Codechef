@@ -1,47 +1,15 @@
 #include<iostream>
 using namespace std;
-int main()
+int main(int argc, char const *argv[])
 {
-    int a[4],n;
+    int a,b,c,d,n;
+    // Taking the number of input from the user
     cin>>n;
-    if (n<=100&&n>=1)
-    {
-    for (int i = 0; i < n; i++)
-    {
-    for (int i = 0; i < 4; i++)
-    {
-        cin>>a[i];
+    // using while loop to iterate
+    while(n--){
+        cin>>a>>b>>c>>d;
+        int x = a>b? a:b;
+        int y = c>d? c:d;
+        cout<<x+y<<endl;
     }
-    }
-    for (int  i = 0,j = 0; i < n; i++,j++)
-    {
-        if (a[0]<a[1]&&a[2]<a[3])
-        {
-            a[j]=a[1]+a[3];
-            break;
-        }
-        else if (a[0]>a[1]&&a[2]<a[3])
-        {
-            a[j]=a[0]+a[3];
-            break;
-        }
-        else if (a[0]>a[1]&&a[2]>a[3])
-        {
-            a[j]=a[0]+a[2];
-            break;
-        }
-        else if (a[0]<a[1]&&a[2]>a[3])
-        {
-            a[j]=a[1]+a[2];
-            break;
-        }
-    }
-    for (int j = n; j > 0; j--)
-    {
-        cout<<a[j]<<endl;
-    }
-    
-    
-    }
-    return 0;
 }
